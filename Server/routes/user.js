@@ -1,14 +1,10 @@
 const express = require("express");
-const { handleUserSignup } = require("../controllers/user");
+const { handleUserSignup, handelUserLogin } = require("../controllers/user");
 const router = express.Router();
 
-router.post("/", (req, res) => {
-  res.send("Auth Home");
-});
+router.post("/", handleUserSignup);
 
-router.get("/login", (req, res) => {
-  res.send("Login Page");
-});
+router.post("/login", handelUserLogin);
 
 router.get("/signup", (req, res) => {
   res.send("Signup Page");
