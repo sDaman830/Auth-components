@@ -2,7 +2,7 @@ const express = require("express");
 const { handleUserSignup } = require("../controllers/user");
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.post("/", (req, res) => {
   res.send("Auth Home");
 });
 

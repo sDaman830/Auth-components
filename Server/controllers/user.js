@@ -1,4 +1,4 @@
-const USer = require("..models/user");
+const USer = require("../models/users");
 
 async function handleUserSignup(req, res) {
   const { name, email, password } = req.body;
